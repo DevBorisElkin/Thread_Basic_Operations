@@ -1,0 +1,16 @@
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\bin\Debug\net5.0\Thread_Basic_Operations.exe
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\bin\Debug\net5.0\Thread_Basic_Operations.deps.json
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\bin\Debug\net5.0\Thread_Basic_Operations.runtimeconfig.json
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\bin\Debug\net5.0\Thread_Basic_Operations.runtimeconfig.dev.json
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\bin\Debug\net5.0\Thread_Basic_Operations.dll
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\bin\Debug\net5.0\ref\Thread_Basic_Operations.dll
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\bin\Debug\net5.0\Thread_Basic_Operations.pdb
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\obj\Debug\net5.0\Thread_Basic_Operations.csproj.AssemblyReference.cache
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\obj\Debug\net5.0\Thread_Basic_Operations.GeneratedMSBuildEditorConfig.editorconfig
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\obj\Debug\net5.0\Thread_Basic_Operations.AssemblyInfoInputs.cache
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\obj\Debug\net5.0\Thread_Basic_Operations.AssemblyInfo.cs
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\obj\Debug\net5.0\Thread_Basic_Operations.csproj.CoreCompileInputs.cache
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\obj\Debug\net5.0\Thread_Basic_Operations.dll
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\obj\Debug\net5.0\ref\Thread_Basic_Operations.dll
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\obj\Debug\net5.0\Thread_Basic_Operations.pdb
+C:\BORIS\Storage1\BORIS' FOLDER\programming\C#\Thread_Basic_Operations\Thread_Basic_Operations\obj\Debug\net5.0\Thread_Basic_Operations.genruntimeconfig.cache
