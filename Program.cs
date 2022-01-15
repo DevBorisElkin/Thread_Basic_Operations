@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Thread_Basic_Operations
 {
@@ -7,13 +8,90 @@ namespace Thread_Basic_Operations
     {
         static void Main(string[] args)
         {
+            Test_0_AsyncAwait();
             //Test_1_Lock();
             //Test_2_Monitor();
             //Test_3_ManualResetEvent();
             //Test_4_AutoResetEvent();
             //Test_5_Mutex();
-            Test_6_SemaphoreExample();
+            //Test_6_SemaphoreExample();
         }
+
+        #region Async Await Example
+
+        // When there's no synchronization context in the app (Like in the simple ConsoleApp), async/await has no difference to creating
+        // new threads approach, because without sync context it will create new threads anyway
+        // unlike when we have sync context (Like in the WindowsForms app) async await will try to execute asynchronous code within
+        // the thread which calls the code (e.g. main thread)
+
+        // internally out C# apps implement such thing as state machine, which divides code into chunks and then decides on which thread to
+        // execute them
+
+        // but, as tests show, code in the main method was executed with thread(1), in the newwly created thread with id 5
+        // and all async await with thread(4)
+ 
+        static int delay = 10000;
+        static async void Test_0_AsyncAwait()
+        {
+            Console.WriteLine("Hello_1 " + Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("Hello_2 " + Thread.CurrentThread.ManagedThreadId);
+
+            AsyncWork();
+            Thread thread = new Thread(ThreadWork);
+            thread.Name = "CoolWorker";
+            thread.Start();
+
+            Console.WriteLine("Hello_5 " + Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("Hello_6 " + Thread.CurrentThread.ManagedThreadId);
+
+            AsyncWork_2();
+
+            AsyncWork_3();
+
+            Console.WriteLine("Hello_16 " + Thread.CurrentThread.ManagedThreadId);
+            Console.ReadKey();
+        }
+
+        static async void AsyncWork()
+        {
+            Console.WriteLine("Hello_3 " + Thread.CurrentThread.ManagedThreadId);
+            await Task.Delay(delay);
+            Console.WriteLine("Hello_4 " + Thread.CurrentThread.ManagedThreadId);
+        }
+        static void ThreadWork()
+        {
+            Console.WriteLine("Hello_7 " + Thread.CurrentThread.ManagedThreadId);
+
+            AdditionalAsyncWorkForThread();
+
+            Console.WriteLine("Hello_8 " + Thread.CurrentThread.ManagedThreadId);
+            Task.Delay(delay).Wait();
+            Console.WriteLine("Hello_9 " + Thread.CurrentThread.ManagedThreadId);
+        }
+
+        async static void AdditionalAsyncWorkForThread()
+        {
+            Console.WriteLine("Hello_10 " + Thread.CurrentThread.ManagedThreadId);
+            await Task.Delay(4000);
+            Console.WriteLine("Hello_11 " + Thread.CurrentThread.ManagedThreadId);
+        }
+        static async void AsyncWork_2()
+        {
+            Console.WriteLine("Hello_12 " + Thread.CurrentThread.ManagedThreadId);
+            await Task.Delay(delay);
+            Console.WriteLine("Hello_13 " + Thread.CurrentThread.ManagedThreadId);
+        }
+        static async void AsyncWork_3()
+        {
+            Console.WriteLine("Hello_14 " + Thread.CurrentThread.ManagedThreadId);
+            //await Task.Delay(delay + 2000);
+            await Task.Delay(1000);
+
+            // this one even got lost when method was declared as Task and awaited in the main method
+            Console.WriteLine("Hello_15 " + Thread.CurrentThread.ManagedThreadId);
+        }
+
+        #endregion
 
         #region lock test
 
